@@ -6,6 +6,7 @@ const word = require('../routes/words');
 const auth = require('../routes/auth');
 const user = require('../routes/user');
 const freqWords = require('../routes/freqWords');
+const feedback = require('../routes/feedback');
 
 module.exports = function(app) {
     //middilwares
@@ -20,4 +21,5 @@ module.exports = function(app) {
     app.use("/api/auth", auth);
     app.use('/api/words', word);
     app.use('/api/freqWords', freqWords);
+    app.use('/api/feedback', feedback);
 }
